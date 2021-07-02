@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="150dp"
+    android:layout_height="210dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="25dp"
+    app:cardBackgroundColor="@color/topic_background">
+
+    <ImageView
+        android:id="@+id/topicIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_small_cards_play"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="24dp"/>
+    <TextView
+        android:id="@+id/topicTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:text="intorducing"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="46.17dp"
+        android:layout_marginEnd="13.83dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:text="what is it ?"
+        android:layout_marginTop="73dp"
+        android:layout_marginStart="25.17dp" />
+
+    <TextView
+        android:id="@+id/duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:text="20 min"
+        android:layout_marginTop="102dp"
+        android:layout_marginStart="24dp" />
+
+    <ImageButton
+        android:id="@+id/playButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_playbutton"
+        android:background="#00FFFFFF"
+        android:layout_marginTop="142dp"
+        android:layout_marginStart="24dp"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_triangle"
+        android:layout_marginTop="154dp"
+        android:layout_marginStart="39dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:text="20 min"
+        android:layout_marginTop="154dp"
+        android:layout_marginStart="70dp" />
+
+
+
+
+
+
+</androidx.cardview.widget.CardView>
