@@ -7,6 +7,7 @@ import android.widget.TextView
 import androidx.activity.viewModels
 import androidx.lifecycle.LifecycleOwner
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.shemajamebeli10.adapters.CoursesRecyclerAdapter
 import com.example.shemajamebeli10.adapters.TopicRecyclerAdapter
 import com.example.shemajamebeli10.databinding.ActivityMainBinding
 import com.example.shemajamebeli10.databinding.TopicRecyclerItemBinding
@@ -17,6 +18,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding : ActivityMainBinding
     private lateinit var topicAdapter : TopicRecyclerAdapter
+    private lateinit var courcesAdapter : CoursesRecyclerAdapter
 
     private val viewModel : CousresViewModel by viewModels()
 
@@ -37,9 +39,13 @@ class MainActivity : AppCompatActivity() {
 
     private fun initRecyclers(){
         topicAdapter = TopicRecyclerAdapter()
-        binding.topicRecycler.layoutManager = LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,true)
+        binding.topicRecycler.layoutManager = LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false)
         binding.topicRecycler.adapter = topicAdapter
 
+
+        courcesAdapter = CoursesRecyclerAdapter()
+        binding.topicRecycler.layoutManager = LinearLayoutManager(this)
+        binding.topicRecycler.adapter = courcesAdapter
 
     }
 
@@ -51,6 +57,8 @@ class MainActivity : AppCompatActivity() {
 
                 Resource.Status.Succsess -> {
                     it.data?.topic?.let { it1 -> topicAdapter.getData(it1) }
+
+                    it.data?.courses?.let { it1 -> courcesAdapter.getData(it1) }
 
                 }
                 Resource.Status.Error -> {
